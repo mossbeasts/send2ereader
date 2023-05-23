@@ -25,7 +25,7 @@ This repo is what I'm using on my self-hosted version (link to follow).
       - the actual commands you'll use to do this are `git clone --single-branch --branch gh-pages https://github.com/pgaskin/kepubify.git` (doesn't need root) and then `npm install ./kepubify`
 4. ideally, we would then install KindleGen to do EPUB -> MOBI conversions. Unfortunately, Amazon has discontinued KindleGen, so we'll leave it out for now. Thus, I've removed all mention of it on my `upload.html`. (If I *do* figure out how to get EPUB -> MOBI conversions working/how to install KindleGen, I'll update here).
 5. cd to the directory where you've got your `index.js` and everything else.
-6. run `node index.js` to start send2ereader. If all went well, you'll get `server is listening on port 3001`.
+6. run `node index.js` to start send2ereader. If all went well, you'll get `server is listening on port 3001`. (you can change the actual port in `index.js`. In fact, I'd recommend poking around in it to make sure that everything's as you want it - including the all-important `style.css`.)
 7. open your browser, navigate to your IP:3001 to make sure everything's working. If all *didn't* go well, you'll want to read the errors you got, google them, and then fix them.
 9. If you want your send2ereader instance to be available outside your local network, you'll want to set up port forwarding and (probably) a domain name. Explaining how to do those things varies based on router and how you decide to go about getting a domain name, so a more detailed explanation is out of scope. you'll also probably want to make sure that you've got a decent security setup, but if you're selfhosting things I assume you've got a good idea of what that should entail.
 10. enjoy! :)
