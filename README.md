@@ -19,10 +19,10 @@ This repo is what I'm using on my self-hosted version (link to follow).
     - child_process
     - path
     - file-type
-3. You're also going to need to install `kepubify` if you want to be able to convert EPUBs to KEPUBS. You can leave this out if you want, but if you do, I would recommend editing `upload.html` to remove all references to kepubify: if you don't have it installed and working and someone tries to send an EPUB to be converted, send2ereader is going to crash. I wouldn't remove the section on it in `index.js` in case you decide to add it later.
-      - **installing kepubify**:
-     - the easiest way is to clone the gh-pages branch of the kepubify repo, and use that for your npm package. I'm sure there's a more elegant way, but it's not what I used.
-      - the actual commands you'll use to do this are `git clone --single-branch --branch gh-pages https://github.com/pgaskin/kepubify.git` (doesn't need root) and then `npm install ./kepubify`
+3. You're also going to need to install `kepubify` if you want to be able to convert EPUBs to KEPUBS. Do this by running `curl -LJO https://github.com/pgaskin/kepubify/releases/download/v4.0.4/kepubify-linux-64bit \
+  && mv kepubify-linux-64bit /usr/bin/kepubify \
+  && chmod +x /usr/bin/kepubify` 
+    - You can leave this out if you want, but if you do, I would recommend editing `upload.html` to remove all references to kepubify: if you don't have it installed and working and someone tries to send an EPUB to be converted, send2ereader is going to crash. I wouldn't remove the section on it in `index.js` in case you decide to add it later. 
 4. ideally, we would then install KindleGen to do EPUB -> MOBI conversions. Unfortunately, Amazon has discontinued KindleGen, so we'll leave it out for now. Thus, I've removed all mention of it on my `upload.html`. (If I *do* figure out how to get EPUB -> MOBI conversions working/how to install KindleGen, I'll update here).
 
 ### running it!
