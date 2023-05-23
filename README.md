@@ -6,9 +6,10 @@ This repo is what I'm using on my self-hosted version (link to follow).
 ## Instructions to set up a copy for yourself:
 ### assumptions for these instructions
   - you're using linux.
-  - you have a basic idea of how to work a CLI
+  - you have a basic idea of how to work a CLI.
   - you're running all of these commands as root (i'll mark the ones that don't have to be root).
   - you're going to ignore my inevitable typos; I'm writing this directly into github's "create a README" page.
+  - You're running this in a VM or on a regular machine - if you want to do it in a container, take a look at some of the other forks.
 
 ### prereqs
 1. Install node.js and npm (node package manager). Actual method will vary based on your distro, but as it's pretty widely used, it shouldn't be hard to find instructions.
